@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InSTEMulate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        /* body layout design */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-image: url('without_title.png'); /* Background image for body */
+            background-size: cover; 
+            background-position: center; 
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        /* Score layout design*/
+        .score {
+            background-color: #000305; /* Dark blue */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* question styling */
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* options styling */
+        .options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .option {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: auto;
+            background-color: #1e90ff; 
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            transition-duration: 0.4s;
+            border-radius: 20px; /* Rounded */
+            outline: none;
+            width: 200px;
+            font-family: 'Press Start 2P', cursive;
+        }
+        /* hover option for the buttons */
+        .option:hover {
+            background-color: #007bb5; 
+        }
+
+        /* Container for questions and answers */
+        .container {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff; /* White background */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="score">Score: <span id="score">0</span></div>
+        <h2>What is the brain of a computer?</h2>
+        <div class="options">
+            <button class="option" id="cpuButton">a) CPU</button>
+            <button class="option" id="gpuButton">b) GPU</button>
+            <button class="option" id="ramButton">c) RAM</button>
+            <button class="option" id="hddButton">d) HDD</button>
+        </div>
+    </div>
+
+    <script>
+        let score = 0;
+
+        // Update score function
+        function updateScore() {
+            document.getElementById('score').innerText = score;
+        }
+
+        // JavaScript code to show "Hooray!" when the correct answer is clicked
+        document.getElementById('cpuButton').addEventListener('click', function() {
+            alert("Hooray! CPU is correct!");
+            score++;
+            updateScore();
+        });
+
+        // Add event listeners to incorrect answers (optional)
+        document.getElementById('gpuButton').addEventListener('click', function() {
+            alert("Incorrect! GPU stands for Graphics Processing Unit.");
+        });
+
+        document.getElementById('ramButton').addEventListener('click', function() {
+            alert("Incorrect! RAM stands for Random Access Memory.");
+        });
+
+        document.getElementById('hddButton').addEventListener('click', function() {
+            alert("Incorrect! HDD stands for Hard Disk Drive.");
+        });
+    </script>
+
+</body>
+</html>

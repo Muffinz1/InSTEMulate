@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('covers/without_title.png');
+    background-size: cover; 
+    background-position: center; 
+}
+
+.score {
+    background-color: #000305;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.option {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: auto;
+    background-color: #1e90ff; 
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    transition-duration: 0.4s;
+    border-radius: 20px;
+    outline: none;
+    width: 200px;
+}       
+#musicControlButton {
+    position: fixed;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    z-index: 9999; /* Ensure it's on top of other content */
+    color: white; /* Text color */
+}
+
+/* Style for the play button icon */
+#musicControlButton::before {
+    content: '\25B6\FE0E'; /* Unicode character for play button icon (with variation selector to force text presentation) */
+    font-size: 24px; /* Adjust as needed */
+}
+
+/* Style for the pause button icon */
+#musicControlButton.paused::before {
+    content: '\23F8'; /* Unicode character for pause button icon */
+    font-size: 24px; /* Adjust as needed */
+}
+.option:hover {
+    background-color: #007bb5; 
+}
+
+.container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    text-align: center;
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+}
+
+.correct {
+    background-color: #00FF00; 
+}
+
+.wrong {
+    background-color: #FF0000;
+}
