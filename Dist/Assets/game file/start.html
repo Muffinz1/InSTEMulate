@@ -90,48 +90,19 @@
         filter: brightness(85%);
         background-color: #0056b3;
         }
-        #musicControlButton {
-            position: fixed;
-            top: 10px; /* Adjust as needed */
-            right: 10px; /* Adjust as needed */
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            outline: none;
-            z-index: 9999; /* Ensure it's on top of other content */
-            color: white; /* Text color */
-        }
-
-        /* Style for the play button icon */
-        #musicControlButton::before {
-            content: '\25B6\FE0E'; /* Unicode character for play button icon (with variation selector to force text presentation) */
-            font-size: 24px; /* Adjust as needed */
-        }
-
-        /* Style for the pause button icon */
-        #musicControlButton.paused::before {
-            content: '\23F8'; /* Unicode character for pause button icon */
-            font-size: 24px; /* Adjust as needed */
-        }
+ 
     </style>
 </head>
 <body>
-    <audio id="backgroundMusic" autoplay >
-        <!-- Add source elements for different audio file formats -->
-        <source src="music/song1.mp3" type="audio/mpeg">
-    </audio>
     <div class="container">
         <button id="startButton" onclick="start()">Start</button>
         <button id="optionButton" onclick="option()">Option</button>
-        <button id="musicControlButton" onclick="toggleMusic()">🎵</button>
         <button id="exitButton" onclick="exitQuiz()">Exit</button>
     </div>
-    <script src="music.js"></script>
     <script>
         
         function start() {
             window.location.href = 'game.html';
-            document.documentElement.requestFullscreen();
         }
         function exitQuiz() {
             window.close()
