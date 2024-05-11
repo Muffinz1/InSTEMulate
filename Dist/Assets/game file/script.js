@@ -2,8 +2,8 @@ let score = 0;
 let currentQuestionIndex = 0;
 let questions = [];
 let answerChosen = false;
-let amount = 5;
-let category = 32;
+let amount = 10;
+let category = 31;
 let difficulty = 'easy'; 
 let questionType = 'multiple';
 function updatelink() {
@@ -61,8 +61,10 @@ function displayQuestion() {
                     }, 2000);
                 } else {
                     this.classList.add('wrong');
-                    const correctButton = document.querySelector('.option');
-                    correctButton.classList.add('correct');
+                    const correctAnswerBox = document.createElement('div');
+                    correctAnswerBox.textContent = `Correct answer: ${currentQuestion.correctAnswer}`;
+                    correctAnswerBox.classList.add('correct-answer-box');
+                    this.parentNode.insertBefore(correctAnswerBox, this.nextSibling);
                     setTimeout(() => {
                         currentQuestionIndex++;
                         if (currentQuestionIndex < questions.length) {
@@ -70,7 +72,7 @@ function displayQuestion() {
                         } else {
                             showFinalScore();
                         }
-                    }, 5000);
+                    }, 2000);
                 }
                 updateScore();
                 disableButtons();
