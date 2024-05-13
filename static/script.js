@@ -96,7 +96,7 @@ function showFinalScore() {
 function showFinalScore() {
     document.getElementById('finalScore').innerText = `Final Score: ${score}`;
     setTimeout(() => {
-        window.location.href = 'start.html'; 
+        window.location.href = '/start'; 
     }, 2000);
 }
 

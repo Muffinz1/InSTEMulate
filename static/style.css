@@ -68,3 +68,12 @@ h2 {
 .wrong {
     background-color: #FF0000;
 }
+.audio-container {
+    position: fixed;
+    top: 10px; /* Adjust the distance from the top as needed */
+    right: 10px; /* Adjust the distance from the right as needed */
+    z-index: 9999;
+}
+.custom-audio {
+    width: 250; /* Adjust the width as needed */
+}
