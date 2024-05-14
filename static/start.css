@@ -1,0 +1,79 @@
+body {
+    background-image: url(/static/covers/inSTEMulate.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+#buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px; 
+}
+#startButton {
+    margin-top: 140px;
+    padding: 15px 30px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    background-color: #00cf2d;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: xx-large;
+}
+#exitButton {
+    padding: 15px 30px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: xx-large;
+
+
+}
+#exitButton {
+    background-color: #dc3545;
+    color: #fff;
+}
+#startButton:hover,
+#exitButton:hover {
+    filter: brightness(85%);
+}
+#startButton:hover {
+    background-color: #0056b3;
+}
+#optionButton {
+margin-top: 140px;
+padding: 15px 30px;
+font-family: 'Press Start 2P', cursive;
+font-size: 20px;
+background-color: #000000;
+color: #ffffff;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+outline: none;
+font-family: "Orbitron", sans-serif;
+font-weight: bold;
+font-size: xx-large;
+}
+
+#optionButton:hover {
+filter: brightness(85%);
+background-color: #0056b3;
+}

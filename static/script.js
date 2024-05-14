@@ -2,9 +2,9 @@ let score = 0;
 let currentQuestionIndex = 0;
 let questions = [];
 let answerChosen = false;
-let amount = 10;
-let category = 31;
-let difficulty = 'easy'; 
+let amount = 20;
+let category = 18;
+let difficulty = 'medium'; 
 let questionType = 'multiple';
 function updatelink() {
     link = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=${questionType}`;

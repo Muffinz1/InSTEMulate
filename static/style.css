@@ -70,10 +70,10 @@ h2 {
 }
 .audio-container {
     position: fixed;
-    top: 10px; /* Adjust the distance from the top as needed */
-    right: 10px; /* Adjust the distance from the right as needed */
+    top: 10px;
+    right: 10px; 
     z-index: 9999;
 }
 .custom-audio {
-    width: 250; /* Adjust the width as needed */
+    width: 250; 
 }
