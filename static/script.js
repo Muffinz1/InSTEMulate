@@ -3,7 +3,7 @@ let currentQuestionIndex = 0;
 let questions = [];
 let answerChosen = false;
 let amount = 20;
-let category = 18;
+let category = 31;
 let difficulty = 'medium'; 
 let questionType = 'multiple';
 function updatelink() {

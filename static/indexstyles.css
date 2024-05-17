@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url(covers/frontground.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+padding: 20px;
+}
+
+header .navbar {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+
+}
+.navbar .logo {
+    font-size: 4.1rem;
+    font-weight: 600;
+}
+
+.navbar.logo span{
+    color: aqua;
+}
+
+.navbar .menu-links {
+    display: flex;
+    gap: 40px;
+
+
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.navbar a:hover{
+    background: linear-gradient(135deg, #6a11cb, #2575fc, #00c3ff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.hero-section .content{
+    color: #fff;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.hero-section .content h1 {
+    font-size: 3rem;
+    max-width: 600px;
+}
+
+.hero-section .content p {
+    font-weight: 300;
+    margin-top: 15px;
+    max-width: 600px;
+}
+.hero-section .content button{
+    background-color: #fff;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 38px;
+    padding: 12px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.hero-section .content button:hover{
+    background: linear-gradient(135deg, #6a11cb, #2575fc, #00c3ff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
