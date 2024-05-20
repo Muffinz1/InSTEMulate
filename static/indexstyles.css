@@ -13,7 +13,7 @@ body {
 }
 
 header {
-position: fixed;
+position: flex;
 top: 0;
 left: 0;
 width: 100%;
@@ -33,9 +33,6 @@ header .navbar {
     font-weight: 600;
 }
 
-.navbar.logo span{
-    color: aqua;
-}
 
 .navbar .menu-links {
     display: flex;
@@ -92,6 +89,81 @@ header .navbar {
 }
 
 .hero-section .content button:hover{
+    background: linear-gradient(135deg, #6a11cb, #2575fc, #00c3ff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+footer {
+    background-color: #0e121d;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    background-color: #fff;
+    text-decoration: none;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-section ul li a:hover{
+    background: linear-gradient(135deg, #6a11cb, #2575fc, #00c3ff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+ .social-icons a:hover{
+background: linear-gradient(135deg, #c0c0c0, #a9a9a9, #808080);
+ }
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer-bottom:hover{
     background: linear-gradient(135deg, #6a11cb, #2575fc, #00c3ff);
     background-clip: text;
     -webkit-text-fill-color: transparent;
