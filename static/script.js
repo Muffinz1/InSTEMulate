@@ -3,11 +3,16 @@ let currentQuestionIndex = 0;
 let questions = [];
 let answerChosen = false;
 let amount = 20;
-let category = 31;
+let category;
 let difficulty = 'medium'; 
 let questionType = 'multiple';
 function updatelink() {
+    if (category){
     link = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=${questionType}`;
+    }
+    else {
+        link = "https://opentdb.com/api.php?amount=20";
+    }
 }
 updatelink();
 function updateScore() {
