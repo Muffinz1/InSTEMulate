@@ -1,41 +1,57 @@
-import { ScrollView, SafeAreaView, Text, View, Image } from 'react-native'
-import React from 'react'
-import { images } from '../../constants'
-import { CustomButton, FormField } from '../../components'
-import { useState } from 'react'
-import { Link } from 'expo-router'
+import { useState } from "react";
+import { Link, router } from "expo-router";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { View, Text, ScrollView, Alert, Image } from "react-native";
+
+import { images } from "../../constants";
+import { createUser } from "../../lib/appwrite";
+import { CustomButton, FormField } from "../../components";
+import { useGlobalContext } from "../../context/GlobalProvider";
 
 const SignUp = () => {
+  const { setUser, setIsLogged } = useGlobalContext();
 
+  const [isSubmitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
     username: "",
     email: "",
     password: "",
   });
 
-  const [isSubmitting, setisSubmitting] = useState(false)
+  const submit = async () => {
+    if (form.username === "" || form.email === "" || form.password === "") {
+      Alert.alert("Error", "Please fill in all fields");
+    }
 
-  const submit = () => {
+    setSubmitting(true);
+    try {
+      const result = await createUser(form.email, form.password, form.username);
+      setUser(result);
+      setIsLogged(true);
 
-  }
+      router.replace("/quiz");
+    } catch (error) {
+      Alert.alert("Error", error.message);
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
     <>
       <SafeAreaView className="bg-zinc-800 h-full">
         <ScrollView>
-          <View className="w-full justify-center min-h[85vh] px-4 my-5">
+          <View className="w-full justify-center min-h[85vh] px-4 my-4">
             <Image
             source={images.ilogo}
             className="w-48 h-44  mx-auto "
             resizeMode='contain'
             />
-            <Text className="text-2xl font-psemibold text-white my-4 mt-8">
-              Sign Up to inSTEMulate
-            </Text>
+            
             <FormField
               title="Username"
               value={form.username}
-              handleChangeText={(e) => setForm({ ...form, usernamer: e })}
+              handleChangeText={(e) => setForm({ ...form, username: e })}
             />
             <FormField
               title="Email"
