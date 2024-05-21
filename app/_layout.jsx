@@ -1,8 +1,8 @@
-import { Text, View, StyleSheet } from "react-native";
 import { useEffect } from "react";
 import { SplashScreen, Stack } from "expo-router";
 import { useFonts } from "expo-font";
-
+import GlobalProvider from "../context/GlobalProvider";
+import { StatusBar } from "expo-status-bar";
 
 SplashScreen.preventAutoHideAsync(); // Prevent the splash screen from auto-hiding
 
@@ -34,14 +34,18 @@ const Rootlayout = () => {
       if (!fontsLoaded && !error) {
         return null;
       }
-
+    
     return (
+      <GlobalProvider>
         <Stack>
             <Stack.Screen name="index" options={{ headerShown: false }}/>
             <Stack.Screen name="(auth)/sign-in" options={{ headerShown: false }}/>
             <Stack.Screen name="(auth)/sign-up" options={{ headerShown: false }}/>
             <Stack.Screen name="(tabs)" options={{ headerShown: false }}/>
+            <Stack.Screen name="question-page" options={{ headerShown: false }}/>
+   
         </Stack>
+      </GlobalProvider>
     )
 }
 
