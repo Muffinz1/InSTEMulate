@@ -10,8 +10,6 @@ import GlobalProvider, { useGlobalContext } from '../context/GlobalProvider';
 export default function App() {
   const { loading, isLogged } = useGlobalContext();
 
-  console.log(isLogged);
-
   if (!loading && isLogged) return <Redirect href="/quiz" />;
   return (
     <GlobalProvider>

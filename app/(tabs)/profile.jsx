@@ -37,7 +37,6 @@ const Profile = () => {
     setIsLogged(false);
     router.replace("/sign-in");
   };
-  console.log(user)
   return (
     <SafeAreaView className="bg-gray-800 h-full">
         <View className="w-full flex justify-center items-center mt-6 mb-12 px-4">
