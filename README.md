@@ -8,7 +8,7 @@ A trivia game that suits everyone.
 
 ## Site 🔗
 > [!IMPORTANT]
-- visit the deployed site <a href="https://instemulate-3dv4.onrender.com/">here<a>
+> visit the deployed site <a href="https://instemulate-3dv4.onrender.com/">here<a>
 
 ## Usage 🪔
  This game can be used for young teaching , fun with friends , even for just knowing news about a regarding category of concern
@@ -21,13 +21,13 @@ A trivia game that suits everyone.
 - Open Trivia Data Base
 
 #### Author
-- Github user :  <a href= "https://github.com/sayv-xo"> Sayv<a>
+- Github user :  <a href= "https://github.com/sayv-xo">Sayv<a>
 - Name : Sayvv
 - <a href = "https://www.linkedin.com/in/gawugah/"> Linked-in <a>
-- GitHub user :  <a href= https://github.com/Muffinz1> Muffinz1<a>
+- GitHub user :  <a href= https://github.com/Muffinz1>Muffinz1<a>
 - Name : Amir
 - <a href = "https://www.linkedin.com/in/amir-ashraf-88a809270/"> Linked-in <a>
-- Github user : <a href= "https://github.com/sinamathew" >Mathew<a>
+- Github user :  <a href= "https://github.com/sinamathew" >Mathew<a>
 - <a href = "https://www.linkedin.com/in/sinamathew/"> Linked-in <a>
 - Name : Sina Mathew
 ## Thanks 
